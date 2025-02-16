@@ -1,11 +1,10 @@
 package fr.acth2.mt.components;
 
 import fr.acth2.mt.utils.Refs;
-
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.net.URL;
+
+import static fr.acth2.mt.utils.Refs.*;
 
 public class MainWindow extends JFrame {
     public MainWindow(int id) {
@@ -26,7 +25,7 @@ public class MainWindow extends JFrame {
 
 
         Image image = new ImageIcon(
-                getClass().getResource("/icons/img.png")
+                getClass().getResource("/icons/cursor.png")
         ).getImage();
         Cursor c = getToolkit().createCustomCursor(image , new Point(getX(),
                 getY()), "img");
@@ -54,13 +53,25 @@ public class MainWindow extends JFrame {
                     getClass().getResource("/icons/music.png")
             ).getImage();
             JLabel musicLabel = new JLabel(new ImageIcon(musicIcon));
-            musicLabel.setBounds(85, 313, 64, 64);
+            musicLabel.setBounds(85 + GLOBALMOVER_TOP, 313, 84, 84);
             add(musicLabel);
 
             JButton m = new JButton("");
             m.setBackground(Color.RED);
-            m.setBounds(43, 300, 150, 100);
+            m.setBounds(43 + GLOBALMOVER_TOP, 300, 170, 120);
             add(m);
+
+            Image imgIcon = new ImageIcon(
+                    getClass().getResource("/icons/img.png")
+            ).getImage();
+            JLabel imgLabel = new JLabel(new ImageIcon(imgIcon));
+            imgLabel.setBounds(265 + GLOBALMOVER_TOP, 313, 84, 84);
+            add(imgLabel);
+
+            JButton r = new JButton("");
+            r.setBackground(Color.BLUE);
+            r.setBounds(220 + GLOBALMOVER_TOP, 300, 170, 120);
+            add(r);
 
             Image downIcon = new ImageIcon(
                     getClass().getResource("/icons/mts-dl.png")
