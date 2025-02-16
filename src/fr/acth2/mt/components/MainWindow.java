@@ -1,8 +1,11 @@
 package fr.acth2.mt.components;
 
+import fr.acth2.mt.handlers.WriterHandler;
 import fr.acth2.mt.utils.Refs;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import static fr.acth2.mt.utils.Refs.*;
 
@@ -107,6 +110,12 @@ public class MainWindow extends JFrame {
             JButton w = new JButton("");
             w.setBackground(Color.WHITE);
             w.setBounds(220 + GLOBALMOVER_DOWN, 425, 170, 120);
+            w.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    new WriterHandler();
+                }
+            });
             add(w);
 
             Image gIcon = new ImageIcon(
