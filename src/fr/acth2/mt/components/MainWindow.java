@@ -85,12 +85,53 @@ public class MainWindow extends JFrame {
             v.setBounds(397 + GLOBALMOVER_TOP, 300, 170, 120);
             add(v);
 
-            Image downIcon = new ImageIcon(
-                    getClass().getResource("/icons/mts-dl.png")
+            Image recIcon = new ImageIcon(
+                    getClass().getResource("/icons/recorder.png")
             ).getImage();
-            JLabel downLabel = new JLabel(new ImageIcon(downIcon));
-            downLabel.setBounds(5, 655, 400, 100);
-            add(downLabel);
+            JLabel recLabel = new JLabel(new ImageIcon(recIcon));
+            recLabel.setBounds(85 + GLOBALMOVER_DOWN, 438, 84, 84);
+            add(recLabel);
+
+            JButton rec = new JButton("");
+            rec.setBackground(Color.GRAY);
+            rec.setBounds(43 + GLOBALMOVER_DOWN, 425, 170, 120);
+            add(rec);
+
+            Image wIcon = new ImageIcon(
+                    getClass().getResource("/icons/writer.png")
+            ).getImage();
+            JLabel wLabel = new JLabel(new ImageIcon(wIcon));
+            wLabel.setBounds(265 + GLOBALMOVER_DOWN, 438, 84, 84);
+            add(wLabel);
+
+            JButton w = new JButton("");
+            w.setBackground(Color.WHITE);
+            w.setBounds(220 + GLOBALMOVER_DOWN, 425, 170, 120);
+            add(w);
+
+            Image gIcon = new ImageIcon(
+                    getClass().getResource("/icons/game.png")
+            ).getImage();
+            JLabel gLabel = new JLabel(new ImageIcon(gIcon));
+            gLabel.setBounds(442 + GLOBALMOVER_DOWN, 438, 84, 84);
+            add(gLabel);
+
+            JButton g = new JButton("");
+            g.setBackground(new Color(127, 0, 255));
+            g.setBounds(397 + GLOBALMOVER_DOWN, 425, 170, 120);
+            add(g);
+
+            Image fmIcon = new ImageIcon(
+                    getClass().getResource("/icons/filemanager.png")
+            ).getImage();
+            JLabel fmLabel = new JLabel(new ImageIcon(fmIcon));
+            fmLabel.setBounds(265 + GLOBALMOVER_DOWN, 556, 84, 84);
+            add(fmLabel);
+
+            JButton fm = new JButton("");
+            fm.setBackground(Color.GREEN);
+            fm.setBounds(220 + GLOBALMOVER_DOWN, 550, 170, 120);
+            add(fm);
         }
 
         repaint();
