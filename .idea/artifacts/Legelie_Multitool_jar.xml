@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Legelie-Multitool:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Legelie_Multitool_jar</output-path>
+    <root id="archive" name="Legelie-Multitool.jar">
+      <element id="module-output" name="Legelie-Multitool" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/discord-rpc.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
