@@ -73,6 +73,18 @@ public class MainWindow extends JFrame {
             r.setBounds(220 + GLOBALMOVER_TOP, 300, 170, 120);
             add(r);
 
+            Image vidIcon = new ImageIcon(
+                    getClass().getResource("/icons/video.png")
+            ).getImage();
+            JLabel vidLabel = new JLabel(new ImageIcon(vidIcon));
+            vidLabel.setBounds(442 + GLOBALMOVER_TOP, 313, 84, 84);
+            add(vidLabel);
+
+            JButton v = new JButton("");
+            v.setBackground(Color.ORANGE);
+            v.setBounds(397 + GLOBALMOVER_TOP, 300, 170, 120);
+            add(v);
+
             Image downIcon = new ImageIcon(
                     getClass().getResource("/icons/mts-dl.png")
             ).getImage();
