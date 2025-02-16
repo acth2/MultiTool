@@ -12,9 +12,9 @@ public class Main {
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
         DiscordEventHandlers handlers = new DiscordEventHandlers();
-        handlers.ready = (user) -> System.out.println("DISCORD RPC STARTED");
+        handlers.ready = (user) -> System.out.println("Linked with " + user);
 
-        DiscordRPC.discordInitialize(CLIENT_ID, handlers, true);
+        DiscordRPC.discordInitialize(CLIENT_ID, handlers, false);
 
         DiscordRichPresence discordPresence = new DiscordRichPresence();
         discordPresence.state = "<- Look at the clock!!!";
