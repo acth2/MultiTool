@@ -1,5 +1,6 @@
 package fr.acth2.mt.components;
 
+import fr.acth2.mt.handlers.FileManagerHandler;
 import fr.acth2.mt.handlers.WriterHandler;
 import fr.acth2.mt.utils.Refs;
 import javax.swing.*;
@@ -113,7 +114,7 @@ public class MainWindow extends JFrame {
             w.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    new WriterHandler();
+                    SwingUtilities.invokeLater(WriterHandler::new);
                 }
             });
             add(w);
@@ -140,6 +141,12 @@ public class MainWindow extends JFrame {
             JButton fm = new JButton("");
             fm.setBackground(Color.GREEN);
             fm.setBounds(220 + GLOBALMOVER_DOWN, 550, 170, 120);
+            fm.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    SwingUtilities.invokeLater(FileManagerHandler::new);
+                }
+            });
             add(fm);
         }
 

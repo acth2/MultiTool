@@ -3,6 +3,7 @@ package fr.acth2.mt.handlers;
 import javax.swing.*;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.plaf.metal.OceanTheme;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
@@ -14,6 +15,7 @@ public class WriterHandler extends JFrame implements ActionListener {
     public WriterHandler()
     {
         f = new JFrame("Multi-Tools Writter");
+        f.setDefaultCloseOperation(HIDE_ON_CLOSE);
 
         try {
             UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
@@ -63,6 +65,8 @@ public class WriterHandler extends JFrame implements ActionListener {
         mb.add(m1);
         mb.add(m2);
         mb.add(mc);
+
+        t.setFont(new Font("Comic Sans MS", Font.PLAIN, 16));
 
         f.setJMenuBar(mb);
         f.add(t);
